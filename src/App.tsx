@@ -10,7 +10,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <div>sds</div>,
+                element: <div className="mt-6">xxx</div>,
             },
             {
                 path: "/application-form",
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/xx",
-                element: <div>sds</div>,
+                element: <div className="mt-6">xxx</div>,
             },
         ],
     },
