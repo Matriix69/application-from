@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.header_nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin-left: 44px; */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    height: 100%;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_nav_links {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active_tab {
+    background-color: #00635b;
+    color: white;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.active_tab::after {
+    z-index: -1;
+    width: 1.6rem;
+    height: 1.6rem;
+    transform: rotate(45deg);
+    content: "";
+    display: block;
+    position: absolute;
+    /* top: -0.8375rem; */
+    border-top-left-radius: 0.25rem;
+    background-color: #00635b;
+    right: -24px;
+    transform: translate(-50%, 0) rotate(45deg);
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 500px) {
+    .header_nav_links {
+        font-size: unset;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #00635b;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #00635b transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

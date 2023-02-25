@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MiniDrawer from "./components/Layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ApplicationForm from "./components/application-form/ApplicationForm";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MiniDrawer />,
+        children: [
+            {
+                path: "/",
+                element: <div>sds</div>,
+            },
+            {
+                path: "/application-form",
+                element: <ApplicationForm />,
+            },
+            {
+                path: "/xx",
+                element: <div>sds</div>,
+            },
+        ],
+    },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
