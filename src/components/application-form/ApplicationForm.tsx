@@ -44,7 +44,9 @@ const ApplicationForm = () => {
             const data: ApiData = await response.json();
             setFields(data.data);
             setTimeout(() => setIsFetching(false), 1000);
-        } catch (error) {}
+        } catch (error) {
+            setIsFetching(false);
+        }
     };
 
     const saveForm = async () => {
