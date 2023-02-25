@@ -45,6 +45,7 @@ const ApplicationForm = () => {
             setFields(data.data);
             setTimeout(() => setIsFetching(false), 1000);
         } catch (error) {
+            toast.error(LIVE_ERROR);
             setIsFetching(false);
         }
     };
@@ -58,7 +59,9 @@ const ApplicationForm = () => {
             });
             if (response.ok) toast.success("Submitted!");
             else toast.error("Ops... something wrong, please test on your local");
-        } catch (error) {}
+        } catch (error) {
+            toast.error("Ops... can't post data, make sure you're running on local");
+        }
     };
 
     useEffect(() => {

@@ -10,6 +10,7 @@ import { generateUUID } from "../../libs/utiles";
 import { ReactComponent as Delete } from "../../assets/icons/delete.svg";
 import styled from "@emotion/styled";
 import { Button as Btn } from "@mui/material";
+import { toast } from "react-hot-toast";
 
 const Button = styled(Btn)({
     color: "#A80000",
@@ -60,7 +61,7 @@ const AddQuestion = ({ fields, setFields, reqType, closeAddQuestion, editFields,
     };
 
     const save = () => {
-        if (!fields) return;
+        if (!fields) return toast("ops.. data not loaded, running on local?");
         switch (reqType) {
             case "personalInformation":
                 if (editFields && typeof index !== "undefined" && !isNaN(index)) {
@@ -123,7 +124,7 @@ const AddQuestion = ({ fields, setFields, reqType, closeAddQuestion, editFields,
     };
 
     const deleteQuestion = () => {
-        if (!fields) return;
+        if (!fields) return toast("ops... data not loaded, running on local?");
         switch (reqType) {
             case "personalInformation":
                 if (editFields && typeof index !== "undefined" && !isNaN(index)) {

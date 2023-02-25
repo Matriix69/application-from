@@ -1,6 +1,7 @@
 import { Checkbox } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
+import { toast } from "react-hot-toast";
 import {
     attributes,
     data,
@@ -81,7 +82,7 @@ const RequiredFields = ({ item, attributes, fields, setFields, reqType, profile 
     };
 
     const handleOnchange = (event: React.ChangeEvent<HTMLInputElement>, path: string, key: string) => {
-        if (!fields) return;
+        if (!fields) return toast("ops.. data not loaded, running on local?");
         switch (reqType) {
             case "personalInformation":
                 return setFields({
