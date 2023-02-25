@@ -41,7 +41,7 @@ const Upload = ({ fields, setFields }: props) => {
         </Card>
     ) : (
         <div className=" rounded-[20px] overflow-hidden shadow-[3px_3px_14px_rgba(190,190,190,0.3)]">
-            <img className=" w-full aspect-[119/64] object-cover " src={image} />
+            <img className=" w-full aspect-[119/64] object-cover " src={image} alt="cover image" />
 
             <button className="w-full text-[#A80000] flex items-center gap-2 p-3" onClick={() => setImage("")}>
                 <Delete />

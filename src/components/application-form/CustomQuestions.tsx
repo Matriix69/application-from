@@ -29,7 +29,7 @@ const CustomQuestions = ({ item, fields, setFields, index, reqType }: props) => 
                             setEdit(true);
                         }}
                     >
-                        <img src={Edit2} alt="" />
+                        <img src={Edit2} alt="edit" />
                     </Button>
                 </div>
             </div>
