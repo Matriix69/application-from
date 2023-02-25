@@ -2,12 +2,12 @@ import { requiredProfileFields } from "./types";
 
 export const URL = "http://127.0.0.1:4010/api/667.8272528181487/programs/itaque/application-form";
 
-interface Routes {
+interface Route {
     title: string;
     path: string;
 }
 
-export const routes: Routes[] = [
+export const routes: Route[] = [
     {
         title: "xxxx",
         path: "/",
@@ -89,12 +89,12 @@ export const requiredProfileValues: requiredProfileFields[] = [
     },
 ];
 
-interface questionTypes {
+interface questionType {
     title: string;
     value: string;
 }
 
-export const questionTypes: questionTypes[] = [
+export const questionTypes: questionType[] = [
     {
         title: "Paragraph",
         value: "Paragraph",
