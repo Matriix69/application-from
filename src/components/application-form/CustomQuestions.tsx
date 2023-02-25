@@ -1,7 +1,6 @@
 // import Edit from "@mui/icons-material/EditOutlined";
 import { Button } from "@mui/material";
 import { Fragment, useState } from "react";
-import { ReactComponent as Edit } from "../../assets/icons/edit.svg";
 import Edit2 from "../../assets/imgs/edit.png";
 import { customQuestions, data } from "../../libs/types";
 import AddQuestion from "./AddQuestion";

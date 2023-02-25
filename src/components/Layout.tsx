@@ -17,7 +17,7 @@ import styled from "@emotion/styled";
 import CottageOutlinedIcon from "@mui/icons-material/CottageOutlined";
 import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
 
-const drawerWidth = 64;
+// const drawerWidth = 64;
 
 interface Props {
     /**
